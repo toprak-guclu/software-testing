@@ -1,0 +1,489 @@
+C:\Users\Toprak\Library-DB-Express>npx stryker run
+02:11:33 (29288) INFO ProjectReader Found 2 of 50 file(s) to be mutated.
+02:11:33 (29288) INFO Instrumenter Instrumented 2 source file(s) with 105 mutant(s)
+02:11:33 (29288) INFO ConcurrencyTokenProvider Creating 11 test runner process(es).
+02:11:34 (29288) INFO DryRunExecutor Starting initial test run (jest test runner with "perTest" coverage analysis). This may take a while.
+02:11:36 (29288) INFO DryRunExecutor Initial test run succeeded. Ran 48 tests in 2 seconds (net 860 ms, overhead 1157 ms).
+Mutation testing  [==================================================] 100% (elapsed: <1m, remaining: n/a) 105/105 Mutants tested (39 survived, 19 timed out)
+
+All tests/books.test.js
+  ✓ GET / redirects to /books with 302 [line 58] (killed 2)
+  ~ GET /books returns 200 [line 68] (covered 15)
+  ~ GET /books returns 200 for page=1 [line 73] (covered 15)
+  ~ GET /books returns 200 for page=2 even if the page is empty [line 78] (covered 15)
+  ✓ GET /books lists all 5 seeded books on the first page [line 83] (killed 7)
+  ~ GET /books?search= searches by title and returns 200 [line 95] (covered 30)
+  ✓ GET /books?search= search by title shows matching book in response [line 100] (killed 9)
+  ~ GET /books?search= searches by author and returns 200 [line 105] (covered 30)
+  ✓ GET /books?search= search by author shows matching book in response [line 110] (killed 2)
+  ~ GET /books?search= searches by genre and returns 200 [line 115] (covered 30)
+  ✓ GET /books?search= search by genre shows matching book in response [line 120] (killed 2)
+  ~ GET /books?search= searches by year and returns 200 [line 126] (covered 30)
+  ✓ GET /books?search= search by year shows matching book in response [line 131] (killed 3)
+  ~ GET /books?search= returns 200 for a search with no matches [line 136] (covered 30)
+  ✓ GET /books?search= shows "no results" message when search has no matches [line 141] (killed 3)
+  ~ GET /books?search= supports search together with pagination [line 147] (covered 30)
+  ~ GET /books/new returns 200 and renders the form [line 156] (covered 4)
+  ✓ GET /books/new rendered page contains title and author input fields [line 161] (killed 2)
+  ✓ POST /books/new creates a valid book and redirects to /books [line 171] (killed 2)
+  ~ POST /books/new creates a book without optional genre and year fields [line 185] (covered 5)
+  ~ POST /books/new genre and year are null when not provided [line 198] (covered 5)
+  ~ POST /books/new new book is actually persisted in the database [line 209] (covered 5)
+  ~ POST /books/new returns validation error (200) when title is missing [line 221] (covered 14)
+  ✓ POST /books/new renders error message when title is missing [line 230] (killed 1)
+  ~ POST /books/new returns validation error (200) when author is missing [line 240] (covered 14)
+  ~ POST /books/new renders error message when author is missing [line 249] (covered 14)
+  ~ POST /books/new returns validation error when both title and author are missing [line 258] (covered 14)
+  ~ POST /books/new does not save book to DB when validation fails [line 267] (covered 14)
+  ~ GET /books/:id returns 200 for an existing book [line 283] (covered 5)
+  ✓ GET /books/:id renders the book title on the detail page [line 289] (killed 3)
+  ~ GET /books/:id renders the author on the detail page [line 295] (covered 5)
+  ~ GET /books/:id renders error page (500) for a non-existing id [line 302] (covered 22)
+  ✓ POST /books/:id (update) updates a valid book and redirects to /books [line 311] (killed 2)
+  ~ POST /books/:id (update) returns validation error when title is empty [line 326] (covered 13)
+  ~ POST /books/:id (update) does not update DB when title is empty [line 337] (covered 13)
+  ~ POST /books/:id (update) returns validation error when author is empty [line 349] (covered 13)
+  ~ POST /books/:id (update) updates only the genre field [line 360] (covered 5)
+  ~ POST /books/:id (update) updates only the year field [line 374] (covered 5)
+  ~ POST /books/:id (update) other fields remain unchanged after partial update [line 388] (covered 5)
+  ✓ POST /books/:id (update) renders error page (500) when updating a non-existing book [line 402] (killed 1)
+  ✓ POST /books/:id/delete (delete) deletes the book and redirects to /books [line 415] (killed 2)
+  ~ POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book [line 428] (covered 20)
+  ~ POST /books/:id/delete (delete) reduces book count by one after deletion [line 433] (covered 4)
+  ~ POST /books/:id/delete (delete) deleted book is no longer findable in the database [line 443] (covered 4)
+  ~ POST /books/:id/delete (delete) other books are not affected after a deletion [line 453] (covered 4)
+  ✓ 404 - unknown route renders the error page for an unknown route [line 469] (killed 2)
+  ~ 404 - unknown route unknown route response contains 404 text [line 474] (covered 10)
+  ~ 404 - unknown route POST to unknown route also returns error page [line 480] (covered 10)
+
+[NoCoverage] BlockStatement
+routes/index.js:105:12
+-       } else {
+-         throw error;
+-       }
++       } else {}
+
+[Survived] ConditionalExpression
+routes/index.js:32:16
+-     const page = req.query.page || 1;
++     const page = true;
+Tests ran:
+    GET /books returns 200
+    GET /books returns 200 for page=1
+    GET /books returns 200 for page=2 even if the page is empty
+  and 12 more tests!
+
+
+[Survived] ConditionalExpression
+routes/index.js:32:16
+-     const page = req.query.page || 1;
++     const page = false;
+Tests ran:
+    GET /books returns 200
+    GET /books returns 200 for page=1
+    GET /books returns 200 for page=2 even if the page is empty
+  and 12 more tests!
+
+
+[Survived] ArithmeticOperator
+routes/index.js:65:27
+-       pageCount = Math.ceil(bookCount / 5);
++       pageCount = Math.ceil(bookCount * 5);
+Tests ran:
+    GET /books?search= searches by title and returns 200
+    GET /books?search= search by title shows matching book in response
+    GET /books?search= searches by author and returns 200
+  and 8 more tests!
+
+
+[Survived] ObjectLiteral
+routes/index.js:67:40
+-       books = await Book.findAndCountAll({
+-         limit: 5,
+-         offset: page*5 -5,
+-       });
++       books = await Book.findAndCountAll({});
+Tests ran:
+    GET /books returns 200
+    GET /books returns 200 for page=1
+    GET /books returns 200 for page=2 even if the page is empty
+  and 1 more test!
+
+
+[Survived] ObjectLiteral
+routes/index.js:92:26
+-     res.render('new-book', {book: {}, title: "New Book"});
++     res.render('new-book', {});
+Tests ran:
+    GET /books/new returns 200 and renders the form
+    GET /books/new rendered page contains title and author input fields
+
+
+[Survived] StringLiteral
+routes/index.js:81:14
+-     res.render('index', {
++     res.render("", {
+Tests ran:
+    GET /books returns 200
+    GET /books returns 200 for page=1
+    GET /books returns 200 for page=2 even if the page is empty
+  and 12 more tests!
+
+
+[Survived] StringLiteral
+routes/index.js:92:44
+-     res.render('new-book', {book: {}, title: "New Book"});
++     res.render('new-book', {book: {}, title: ""});
+Tests ran:
+    GET /books/new returns 200 and renders the form
+    GET /books/new rendered page contains title and author input fields
+
+
+[Survived] ConditionalExpression
+routes/index.js:102:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(true) {
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] ArithmeticOperator
+routes/index.js:73:25
+-     pageCount = Math.ceil(bookCount / 5);
++     pageCount = Math.ceil(bookCount * 5);
+Tests ran:
+    GET /books returns 200
+    GET /books returns 200 for page=1
+    GET /books returns 200 for page=2 even if the page is empty
+  and 12 more tests!
+
+
+[Survived] EqualityOperator
+routes/index.js:102:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(error.name !== 'SequelizeValidationError') {
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] StringLiteral
+routes/index.js:102:23
+-       if(error.name === 'SequelizeValidationError') {
++       if(error.name === "") {
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] ConditionalExpression
+routes/index.js:102:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(false) {
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] ArrowFunction
+routes/index.js:103:39
+-         const errors = error.errors.map(err => err.message)
++         const errors = error.errors.map(() => undefined)
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] ObjectLiteral
+routes/index.js:104:30
+-         res.render('new-book', {errors, book, title: "New Book"});
++         res.render('new-book', {});
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] StringLiteral
+routes/index.js:104:52
+-         res.render('new-book', {errors, book, title: "New Book"});
++         res.render('new-book', {errors, book, title: ""});
+Tests ran:
+    POST /books/new returns validation error (200) when title is missing
+    POST /books/new renders error message when title is missing
+    POST /books/new returns validation error (200) when author is missing
+  and 3 more tests!
+
+
+[Survived] ConditionalExpression
+routes/index.js:124:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(true) {
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+  and 1 more test!
+
+
+[Survived] ConditionalExpression
+routes/index.js:124:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(false) {
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+  and 1 more test!
+
+
+[Survived] EqualityOperator
+routes/index.js:124:8
+-       if(error.name === 'SequelizeValidationError') {
++       if(error.name !== 'SequelizeValidationError') {
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+  and 1 more test!
+
+
+[Survived] StringLiteral
+routes/index.js:124:23
+-       if(error.name === 'SequelizeValidationError') {
++       if(error.name === "") {
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+  and 1 more test!
+
+
+[Survived] ArrowFunction
+routes/index.js:125:39
+-         const errors = error.errors.map(err => err.message);
++         const errors = error.errors.map(() => undefined);
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+
+
+[Survived] StringLiteral
+routes/index.js:126:18
+-         res.render('update-book', {errors, book, title: book.title});
++         res.render("", {errors, book, title: book.title});
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+
+
+[Survived] ObjectLiteral
+routes/index.js:126:33
+-         res.render('update-book', {errors, book, title: book.title});
++         res.render('update-book', {});
+Tests ran:
+    POST /books/:id (update) returns validation error when title is empty
+    POST /books/:id (update) does not update DB when title is empty
+    POST /books/:id (update) returns validation error when author is empty
+
+
+[Survived] StringLiteral
+routes/index.js:23:12
+-   router.get('/', asyncHandler(async (req, res, next) => {
++   router.get("", asyncHandler(async (req, res, next) => {
+Ran all tests for this mutant.
+
+[NoCoverage] StringLiteral
+errorHandlers.js:18:67
+-           err.message = `A Server Error Occured! ${err.message}` || "A Server Error Occurred!";
++           err.message = `A Server Error Occured! ${err.message}` || "";
+
+[Survived] StringLiteral
+errorHandlers.js:15:51
+-           res.render('page-not-found', {err, title: "404.  Page Not Found"});
++           res.render('page-not-found', {err, title: ""});
+Tests ran:
+    404 - unknown route renders the error page for an unknown route
+    404 - unknown route unknown route response contains 404 text
+    404 - unknown route POST to unknown route also returns error page
+
+
+[Survived] StringLiteral
+errorHandlers.js:8:19
+-       err.message = "A 404 Error Occured!  The webpage could not be found!";
++       err.message = "";
+Tests ran:
+    404 - unknown route renders the error page for an unknown route
+    404 - unknown route unknown route response contains 404 text
+    404 - unknown route POST to unknown route also returns error page
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:14:9
+-       if (err.status === 404) {
++       if (true) {
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+  and 3 more tests!
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:14:9
+-       if (err.status === 404) {
++       if (false) {
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+  and 3 more tests!
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:17:22
+-           err.status = err.status || 500;
++           err.status = true;
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] EqualityOperator
+errorHandlers.js:14:9
+-       if (err.status === 404) {
++       if (err.status !== 404) {
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+  and 3 more tests!
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:18:23
+-           err.message = `A Server Error Occured! ${err.message}` || "A Server Error Occurred!";
++           err.message = true;
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:17:22
+-           err.status = err.status || 500;
++           err.status = false;
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] LogicalOperator
+errorHandlers.js:17:22
+-           err.status = err.status || 500;
++           err.status = err.status && 500;
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] ConditionalExpression
+errorHandlers.js:18:23
+-           err.message = `A Server Error Occured! ${err.message}` || "A Server Error Occurred!";
++           err.message = false;
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] StringLiteral
+errorHandlers.js:18:23
+-           err.message = `A Server Error Occured! ${err.message}` || "A Server Error Occurred!";
++           err.message = `` || "A Server Error Occurred!";
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] LogicalOperator
+errorHandlers.js:18:23
+-           err.message = `A Server Error Occured! ${err.message}` || "A Server Error Occurred!";
++           err.message = `A Server Error Occured! ${err.message}` && "A Server Error Occurred!";
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] StringLiteral
+errorHandlers.js:19:21
+-           console.log(`Error Status: ${err.status}`, `Error Message: ${err.message}`);
++           console.log(``, `Error Message: ${err.message}`);
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] StringLiteral
+errorHandlers.js:19:52
+-           console.log(`Error Status: ${err.status}`, `Error Message: ${err.message}`);
++           console.log(`Error Status: ${err.status}`, ``);
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] ObjectLiteral
+errorHandlers.js:20:29
+-           res.render('error', {err});
++           res.render('error', {});
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+[Survived] StringLiteral
+errorHandlers.js:20:20
+-           res.render('error', {err});
++           res.render("", {err});
+Tests ran:
+    GET /books/:id renders error page (500) for a non-existing id
+    POST /books/:id (update) renders error page (500) when updating a non-existing book
+    POST /books/:id/delete (delete) renders error page (500) when deleting a non-existing book
+
+
+Ran 8.06 tests per mutant on average.
+------------------|------------------|----------|-----------|------------|----------|----------|
+                  | % Mutation score |          |           |            |          |          |
+File              |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+------------------|--------|---------|----------|-----------|------------|----------|----------|
+All files         |  60.19 |   61.39 |       43 |        19 |         39 |        2 |        2 |
+ routes           |  70.00 |   70.89 |       41 |        15 |         23 |        1 |        1 |
+  index.js        |  70.00 |   70.89 |       41 |        15 |         23 |        1 |        1 |
+ errorHandlers.js |  26.09 |   27.27 |        2 |         4 |         16 |        1 |        1 |
+------------------|--------|---------|----------|-----------|------------|----------|----------|
+02:12:02 (29288) INFO HtmlReporter Your report can be found at: file:///C:/Users/Toprak/Library-DB-Express/reports/mutation/mutation.html
+02:12:02 (29288) INFO MutationTestExecutor Done in 29 seconds.

@@ -1,0 +1,12 @@
+{
+  "testRunner": "jest",
+  "jest": {
+    "configFile": "package.json"
+  },
+  "mutate": [
+    "routes/index.js",
+    "errorHandlers.js"
+  ],
+  "reporters": ["html", "clear-text", "progress"],
+  "coverageAnalysis": "perTest"
+}

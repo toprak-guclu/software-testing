@@ -1,0 +1,1148 @@
+C:\Users\Toprak\Library-DB-Express>npx jest --coverage
+  console.log
+    Executing (default): DROP TABLE IF EXISTS `Books`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+(node:20804) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  console.log
+    Executing (default): CREATE TABLE IF NOT EXISTS `Books` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `genre` VARCHAR(255), `year` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DROP TABLE IF EXISTS `Books`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): PRAGMA INDEX_LIST(`Books`)
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): CREATE TABLE IF NOT EXISTS `Books` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `author` VARCHAR(255) NOT NULL, `genre` VARCHAR(255), `year` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT 1+1 AS result
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): PRAGMA INDEX_LIST(`Books`)
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Connection to DB Worked!
+
+      at log (app.js:22:13)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.207 +00:00','2026-05-02 22:58:29.207 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.207 +00:00','2026-05-02 22:58:29.207 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.207 +00:00','2026-05-02 22:58:29.207 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.207 +00:00','2026-05-02 22:58:29.207 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.207 +00:00','2026-05-02 22:58:29.207 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET / 302 2.358 ms - 28
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.232 +00:00','2026-05-02 22:58:29.232 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.232 +00:00','2026-05-02 22:58:29.232 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.232 +00:00','2026-05-02 22:58:29.232 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.232 +00:00','2026-05-02 22:58:29.232 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.232 +00:00','2026-05-02 22:58:29.232 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books 200 232.116 ms - 988
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.474 +00:00','2026-05-02 22:58:29.474 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.474 +00:00','2026-05-02 22:58:29.474 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.474 +00:00','2026-05-02 22:58:29.474 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.474 +00:00','2026-05-02 22:58:29.474 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.474 +00:00','2026-05-02 22:58:29.474 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?page=1 200 17.248 ms - 992
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.498 +00:00','2026-05-02 22:58:29.498 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.498 +00:00','2026-05-02 22:58:29.498 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.498 +00:00','2026-05-02 22:58:29.498 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.498 +00:00','2026-05-02 22:58:29.498 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.498 +00:00','2026-05-02 22:58:29.498 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` LIMIT 5, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?page=2 200 14.365 ms - 445
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.520 +00:00','2026-05-02 22:58:29.520 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.520 +00:00','2026-05-02 22:58:29.520 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.520 +00:00','2026-05-02 22:58:29.520 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.520 +00:00','2026-05-02 22:58:29.520 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.520 +00:00','2026-05-02 22:58:29.520 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books 200 11.892 ms - 992
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.540 +00:00','2026-05-02 22:58:29.540 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.540 +00:00','2026-05-02 22:58:29.540 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.540 +00:00','2026-05-02 22:58:29.540 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.540 +00:00','2026-05-02 22:58:29.540 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.540 +00:00','2026-05-02 22:58:29.540 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Hobbit%' OR `Book`.`author` LIKE '%Hobbit%' OR `Book`.`genre` LIKE '%Hobbit%' OR `Book`.`year` LIKE '%Hobbit%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Hobbit%' OR `Book`.`author` LIKE '%Hobbit%' OR `Book`.`genre` LIKE '%Hobbit%' OR `Book`.`year` LIKE '%Hobbit%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Hobbit 200 13.713 ms - 579
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.561 +00:00','2026-05-02 22:58:29.561 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.561 +00:00','2026-05-02 22:58:29.561 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.561 +00:00','2026-05-02 22:58:29.561 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.561 +00:00','2026-05-02 22:58:29.561 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.561 +00:00','2026-05-02 22:58:29.561 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Hobbit%' OR `Book`.`author` LIKE '%Hobbit%' OR `Book`.`genre` LIKE '%Hobbit%' OR `Book`.`year` LIKE '%Hobbit%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Hobbit%' OR `Book`.`author` LIKE '%Hobbit%' OR `Book`.`genre` LIKE '%Hobbit%' OR `Book`.`year` LIKE '%Hobbit%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Hobbit 200 13.556 ms - 579
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.583 +00:00','2026-05-02 22:58:29.583 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.583 +00:00','2026-05-02 22:58:29.583 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.583 +00:00','2026-05-02 22:58:29.583 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.583 +00:00','2026-05-02 22:58:29.583 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.583 +00:00','2026-05-02 22:58:29.583 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tolkien%' OR `Book`.`author` LIKE '%Tolkien%' OR `Book`.`genre` LIKE '%Tolkien%' OR `Book`.`year` LIKE '%Tolkien%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tolkien%' OR `Book`.`author` LIKE '%Tolkien%' OR `Book`.`genre` LIKE '%Tolkien%' OR `Book`.`year` LIKE '%Tolkien%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Tolkien 200 11.899 ms - 579
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.602 +00:00','2026-05-02 22:58:29.602 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.602 +00:00','2026-05-02 22:58:29.602 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.602 +00:00','2026-05-02 22:58:29.602 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.602 +00:00','2026-05-02 22:58:29.602 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.602 +00:00','2026-05-02 22:58:29.602 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tolkien%' OR `Book`.`author` LIKE '%Tolkien%' OR `Book`.`genre` LIKE '%Tolkien%' OR `Book`.`year` LIKE '%Tolkien%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tolkien%' OR `Book`.`author` LIKE '%Tolkien%' OR `Book`.`genre` LIKE '%Tolkien%' OR `Book`.`year` LIKE '%Tolkien%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Tolkien 200 12.377 ms - 579
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.621 +00:00','2026-05-02 22:58:29.621 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.621 +00:00','2026-05-02 22:58:29.621 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.621 +00:00','2026-05-02 22:58:29.621 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.621 +00:00','2026-05-02 22:58:29.621 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.621 +00:00','2026-05-02 22:58:29.621 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Fantasy%' OR `Book`.`author` LIKE '%Fantasy%' OR `Book`.`genre` LIKE '%Fantasy%' OR `Book`.`year` LIKE '%Fantasy%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Fantasy%' OR `Book`.`author` LIKE '%Fantasy%' OR `Book`.`genre` LIKE '%Fantasy%' OR `Book`.`year` LIKE '%Fantasy%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Fantasy 200 10.447 ms - 579
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.644 +00:00','2026-05-02 22:58:29.644 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.644 +00:00','2026-05-02 22:58:29.644 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.644 +00:00','2026-05-02 22:58:29.644 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.644 +00:00','2026-05-02 22:58:29.644 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.644 +00:00','2026-05-02 22:58:29.644 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tech%' OR `Book`.`author` LIKE '%Tech%' OR `Book`.`genre` LIKE '%Tech%' OR `Book`.`year` LIKE '%Tech%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tech%' OR `Book`.`author` LIKE '%Tech%' OR `Book`.`genre` LIKE '%Tech%' OR `Book`.`year` LIKE '%Tech%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Tech 200 10.245 ms - 689
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.662 +00:00','2026-05-02 22:58:29.662 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.662 +00:00','2026-05-02 22:58:29.662 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.662 +00:00','2026-05-02 22:58:29.662 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.662 +00:00','2026-05-02 22:58:29.662 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.662 +00:00','2026-05-02 22:58:29.662 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%2008%' OR `Book`.`author` LIKE '%2008%' OR `Book`.`genre` LIKE '%2008%' OR `Book`.`year` LIKE '%2008%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%2008%' OR `Book`.`author` LIKE '%2008%' OR `Book`.`genre` LIKE '%2008%' OR `Book`.`year` LIKE '%2008%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=2008 200 11.794 ms - 575
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.680 +00:00','2026-05-02 22:58:29.680 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.680 +00:00','2026-05-02 22:58:29.680 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.680 +00:00','2026-05-02 22:58:29.680 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.680 +00:00','2026-05-02 22:58:29.680 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.680 +00:00','2026-05-02 22:58:29.680 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%2008%' OR `Book`.`author` LIKE '%2008%' OR `Book`.`genre` LIKE '%2008%' OR `Book`.`year` LIKE '%2008%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%2008%' OR `Book`.`author` LIKE '%2008%' OR `Book`.`genre` LIKE '%2008%' OR `Book`.`year` LIKE '%2008%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=2008 200 9.208 ms - 575
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.695 +00:00','2026-05-02 22:58:29.695 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.695 +00:00','2026-05-02 22:58:29.695 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.695 +00:00','2026-05-02 22:58:29.695 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.695 +00:00','2026-05-02 22:58:29.695 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.695 +00:00','2026-05-02 22:58:29.695 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%xyznotfound%' OR `Book`.`author` LIKE '%xyznotfound%' OR `Book`.`genre` LIKE '%xyznotfound%' OR `Book`.`year` LIKE '%xyznotfound%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%xyznotfound%' OR `Book`.`author` LIKE '%xyznotfound%' OR `Book`.`genre` LIKE '%xyznotfound%' OR `Book`.`year` LIKE '%xyznotfound%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=xyznotfound 200 10.709 ms - 445
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.713 +00:00','2026-05-02 22:58:29.713 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.713 +00:00','2026-05-02 22:58:29.713 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.713 +00:00','2026-05-02 22:58:29.713 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.713 +00:00','2026-05-02 22:58:29.713 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.713 +00:00','2026-05-02 22:58:29.713 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%xyznotfound%' OR `Book`.`author` LIKE '%xyznotfound%' OR `Book`.`genre` LIKE '%xyznotfound%' OR `Book`.`year` LIKE '%xyznotfound%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%xyznotfound%' OR `Book`.`author` LIKE '%xyznotfound%' OR `Book`.`genre` LIKE '%xyznotfound%' OR `Book`.`year` LIKE '%xyznotfound%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=xyznotfound 200 9.620 ms - 445
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.729 +00:00','2026-05-02 22:58:29.729 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.729 +00:00','2026-05-02 22:58:29.729 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.729 +00:00','2026-05-02 22:58:29.729 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.729 +00:00','2026-05-02 22:58:29.729 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.729 +00:00','2026-05-02 22:58:29.729 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tech%' OR `Book`.`author` LIKE '%Tech%' OR `Book`.`genre` LIKE '%Tech%' OR `Book`.`year` LIKE '%Tech%');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 0)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE (`Book`.`title` LIKE '%Tech%' OR `Book`.`author` LIKE '%Tech%' OR `Book`.`genre` LIKE '%Tech%' OR `Book`.`year` LIKE '%Tech%') LIMIT 0, 5;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+          at async Promise.all (index 1)
+
+GET /books?search=Tech&page=1 200 10.572 ms - 689
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.747 +00:00','2026-05-02 22:58:29.747 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.747 +00:00','2026-05-02 22:58:29.747 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.747 +00:00','2026-05-02 22:58:29.747 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.747 +00:00','2026-05-02 22:58:29.747 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.747 +00:00','2026-05-02 22:58:29.747 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /books/new 200 10.210 ms - 738
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.764 +00:00','2026-05-02 22:58:29.764 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.764 +00:00','2026-05-02 22:58:29.764 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.764 +00:00','2026-05-02 22:58:29.764 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.764 +00:00','2026-05-02 22:58:29.764 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.764 +00:00','2026-05-02 22:58:29.764 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /books/new 200 6.830 ms - 738
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.777 +00:00','2026-05-02 22:58:29.777 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.777 +00:00','2026-05-02 22:58:29.777 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.777 +00:00','2026-05-02 22:58:29.777 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.777 +00:00','2026-05-02 22:58:29.777 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.777 +00:00','2026-05-02 22:58:29.777 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 302 12.147 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Yeni Kitap' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.798 +00:00','2026-05-02 22:58:29.798 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.798 +00:00','2026-05-02 22:58:29.798 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.798 +00:00','2026-05-02 22:58:29.798 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.798 +00:00','2026-05-02 22:58:29.798 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.798 +00:00','2026-05-02 22:58:29.798 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 302 1.801 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Minimum Kitap' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.807 +00:00','2026-05-02 22:58:29.807 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.807 +00:00','2026-05-02 22:58:29.807 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.807 +00:00','2026-05-02 22:58:29.807 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.807 +00:00','2026-05-02 22:58:29.807 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.807 +00:00','2026-05-02 22:58:29.807 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 302 1.838 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Sadece Baslik' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.816 +00:00','2026-05-02 22:58:29.816 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.816 +00:00','2026-05-02 22:58:29.816 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.816 +00:00','2026-05-02 22:58:29.816 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.816 +00:00','2026-05-02 22:58:29.816 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.816 +00:00','2026-05-02 22:58:29.816 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 302 2.797 ms - 28
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.827 +00:00','2026-05-02 22:58:29.827 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.827 +00:00','2026-05-02 22:58:29.827 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.827 +00:00','2026-05-02 22:58:29.827 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.827 +00:00','2026-05-02 22:58:29.827 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.827 +00:00','2026-05-02 22:58:29.827 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 6.912 ms - 834
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.840 +00:00','2026-05-02 22:58:29.840 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.840 +00:00','2026-05-02 22:58:29.840 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.840 +00:00','2026-05-02 22:58:29.840 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.840 +00:00','2026-05-02 22:58:29.840 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.840 +00:00','2026-05-02 22:58:29.840 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 6.387 ms - 834
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.853 +00:00','2026-05-02 22:58:29.853 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.853 +00:00','2026-05-02 22:58:29.853 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.853 +00:00','2026-05-02 22:58:29.853 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.853 +00:00','2026-05-02 22:58:29.853 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.853 +00:00','2026-05-02 22:58:29.853 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 6.478 ms - 835
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.874 +00:00','2026-05-02 22:58:29.874 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.874 +00:00','2026-05-02 22:58:29.874 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.874 +00:00','2026-05-02 22:58:29.874 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.874 +00:00','2026-05-02 22:58:29.874 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.874 +00:00','2026-05-02 22:58:29.874 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 5.527 ms - 835
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.885 +00:00','2026-05-02 22:58:29.885 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.885 +00:00','2026-05-02 22:58:29.885 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.885 +00:00','2026-05-02 22:58:29.885 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.885 +00:00','2026-05-02 22:58:29.885 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.885 +00:00','2026-05-02 22:58:29.885 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 6.174 ms - 876
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.899 +00:00','2026-05-02 22:58:29.899 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.899 +00:00','2026-05-02 22:58:29.899 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.899 +00:00','2026-05-02 22:58:29.899 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.899 +00:00','2026-05-02 22:58:29.899 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.899 +00:00','2026-05-02 22:58:29.899 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/new 200 5.503 ms - 876
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.912 +00:00','2026-05-02 22:58:29.912 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.912 +00:00','2026-05-02 22:58:29.912 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.912 +00:00','2026-05-02 22:58:29.912 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.912 +00:00','2026-05-02 22:58:29.912 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.912 +00:00','2026-05-02 22:58:29.912 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'The Hobbit' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '145';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /books/145 200 9.997 ms - 959
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.929 +00:00','2026-05-02 22:58:29.929 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.929 +00:00','2026-05-02 22:58:29.929 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.929 +00:00','2026-05-02 22:58:29.929 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.929 +00:00','2026-05-02 22:58:29.929 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.929 +00:00','2026-05-02 22:58:29.929 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'The Hobbit' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '150';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /books/150 200 8.002 ms - 959
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.944 +00:00','2026-05-02 22:58:29.944 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.944 +00:00','2026-05-02 22:58:29.944 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.944 +00:00','2026-05-02 22:58:29.944 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.944 +00:00','2026-05-02 22:58:29.944 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.944 +00:00','2026-05-02 22:58:29.944 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'The Hobbit' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '155';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /books/155 200 7.635 ms - 959
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.959 +00:00','2026-05-02 22:58:29.959 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.959 +00:00','2026-05-02 22:58:29.959 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.959 +00:00','2026-05-02 22:58:29.959 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.959 +00:00','2026-05-02 22:58:29.959 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.959 +00:00','2026-05-02 22:58:29.959 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '99999';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Error Status: 500 Error Message: A Server Error Occured! Cannot read properties of null (reading 'title')
+
+      at log (errorHandlers.js:19:17)
+
+GET /books/99999 200 10.159 ms - 482
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.976 +00:00','2026-05-02 22:58:29.976 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.976 +00:00','2026-05-02 22:58:29.976 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.976 +00:00','2026-05-02 22:58:29.976 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.976 +00:00','2026-05-02 22:58:29.976 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.976 +00:00','2026-05-02 22:58:29.976 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Dune' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '167';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): UPDATE `Books` SET `title`=$1,`year`=$2,`updatedAt`=$3 WHERE `id` = $4
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/167 302 3.832 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 167;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:29.987 +00:00','2026-05-02 22:58:29.987 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:29.987 +00:00','2026-05-02 22:58:29.987 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:29.987 +00:00','2026-05-02 22:58:29.987 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:29.987 +00:00','2026-05-02 22:58:29.987 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:29.987 +00:00','2026-05-02 22:58:29.987 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Clean Code' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '171';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/171 200 10.129 ms - 1041
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.004 +00:00','2026-05-02 22:58:30.004 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.004 +00:00','2026-05-02 22:58:30.004 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.004 +00:00','2026-05-02 22:58:30.004 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.004 +00:00','2026-05-02 22:58:30.004 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.004 +00:00','2026-05-02 22:58:30.004 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Clean Code' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '176';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/176 200 8.437 ms - 1041
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 176;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.021 +00:00','2026-05-02 22:58:30.021 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.021 +00:00','2026-05-02 22:58:30.021 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.021 +00:00','2026-05-02 22:58:30.021 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.021 +00:00','2026-05-02 22:58:30.021 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.021 +00:00','2026-05-02 22:58:30.021 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Clean Code' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '181';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/181 200 7.208 ms - 1039
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.035 +00:00','2026-05-02 22:58:30.035 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.035 +00:00','2026-05-02 22:58:30.035 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.035 +00:00','2026-05-02 22:58:30.035 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.035 +00:00','2026-05-02 22:58:30.035 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.035 +00:00','2026-05-02 22:58:30.035 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Sapiens' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '189';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): UPDATE `Books` SET `genre`=$1,`year`=$2,`updatedAt`=$3 WHERE `id` = $4
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/189 302 3.570 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 189;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.047 +00:00','2026-05-02 22:58:30.047 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.047 +00:00','2026-05-02 22:58:30.047 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.047 +00:00','2026-05-02 22:58:30.047 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.047 +00:00','2026-05-02 22:58:30.047 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.047 +00:00','2026-05-02 22:58:30.047 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Sapiens' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '194';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): UPDATE `Books` SET `year`=$1,`updatedAt`=$2 WHERE `id` = $3
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/194 302 2.977 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 194;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.057 +00:00','2026-05-02 22:58:30.057 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.057 +00:00','2026-05-02 22:58:30.057 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.057 +00:00','2026-05-02 22:58:30.057 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.057 +00:00','2026-05-02 22:58:30.057 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.057 +00:00','2026-05-02 22:58:30.057 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Clean Code' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '196';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): UPDATE `Books` SET `genre`=$1,`year`=$2,`updatedAt`=$3 WHERE `id` = $4
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/196 302 2.820 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 196;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.068 +00:00','2026-05-02 22:58:30.068 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.068 +00:00','2026-05-02 22:58:30.068 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.068 +00:00','2026-05-02 22:58:30.068 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.068 +00:00','2026-05-02 22:58:30.068 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.068 +00:00','2026-05-02 22:58:30.068 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '99999';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Error Status: 500 Error Message: A Server Error Occured! Cannot read properties of null (reading 'update')
+
+      at log (errorHandlers.js:19:17)
+
+POST /books/99999 200 5.045 ms - 485
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.079 +00:00','2026-05-02 22:58:30.079 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.079 +00:00','2026-05-02 22:58:30.079 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.079 +00:00','2026-05-02 22:58:30.079 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.079 +00:00','2026-05-02 22:58:30.079 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.079 +00:00','2026-05-02 22:58:30.079 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'The Hobbit' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '205';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books` WHERE `id` = 205
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/205/delete 302 2.621 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 205;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.089 +00:00','2026-05-02 22:58:30.089 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.089 +00:00','2026-05-02 22:58:30.089 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.089 +00:00','2026-05-02 22:58:30.089 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.089 +00:00','2026-05-02 22:58:30.089 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.089 +00:00','2026-05-02 22:58:30.089 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '99999';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Error Status: 500 Error Message: A Server Error Occured! Cannot read properties of null (reading 'destroy')
+
+      at log (errorHandlers.js:19:17)
+
+POST /books/99999/delete 200 4.449 ms - 488
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.099 +00:00','2026-05-02 22:58:30.099 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.099 +00:00','2026-05-02 22:58:30.099 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.099 +00:00','2026-05-02 22:58:30.099 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.099 +00:00','2026-05-02 22:58:30.099 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.099 +00:00','2026-05-02 22:58:30.099 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Sapiens' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '219';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books` WHERE `id` = 219
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/219/delete 302 2.948 ms - 28
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.111 +00:00','2026-05-02 22:58:30.111 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.111 +00:00','2026-05-02 22:58:30.111 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.111 +00:00','2026-05-02 22:58:30.111 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.111 +00:00','2026-05-02 22:58:30.111 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.111 +00:00','2026-05-02 22:58:30.111 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Dune' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '222';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books` WHERE `id` = 222
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/222/delete 302 1.901 ms - 28
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = 222;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.121 +00:00','2026-05-02 22:58:30.121 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.121 +00:00','2026-05-02 22:58:30.121 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.121 +00:00','2026-05-02 22:58:30.121 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.121 +00:00','2026-05-02 22:58:30.121 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.121 +00:00','2026-05-02 22:58:30.121 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'The Hobbit' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`id` = '225';
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books` WHERE `id` = 225
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /books/225/delete 302 2.048 ms - 28
+  console.log
+    Executing (default): SELECT count(*) AS `count` FROM `Books` AS `Book`;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): SELECT `id`, `title`, `author`, `genre`, `year`, `createdAt`, `updatedAt` FROM `Books` AS `Book` WHERE `Book`.`title` = 'Dune' LIMIT 1;
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.136 +00:00','2026-05-02 22:58:30.136 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.136 +00:00','2026-05-02 22:58:30.136 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.136 +00:00','2026-05-02 22:58:30.136 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.136 +00:00','2026-05-02 22:58:30.136 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.136 +00:00','2026-05-02 22:58:30.136 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /bu-sayfa-yok 200 2.987 ms - 268
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.146 +00:00','2026-05-02 22:58:30.146 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.146 +00:00','2026-05-02 22:58:30.146 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.146 +00:00','2026-05-02 22:58:30.146 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.146 +00:00','2026-05-02 22:58:30.146 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.146 +00:00','2026-05-02 22:58:30.146 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+GET /bu-sayfa-yok 200 2.245 ms - 268
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+  console.log
+    Executing (default): INSERT INTO `Books` (`id`,`title`,`author`,`genre`,`year`,`createdAt`,`updatedAt`) VALUES (NULL,'The Hobbit','J.R.R. Tolkien','Fantasy',1937,'2026-05-02 22:58:30.154 +00:00','2026-05-02 22:58:30.154 +00:00'),(NULL,'Clean Code','Robert Martin','Tech',2008,'2026-05-02 22:58:30.154 +00:00','2026-05-02 22:58:30.154 +00:00'),(NULL,'Dune','Frank Herbert','Sci-Fi',1965,'2026-05-02 22:58:30.154 +00:00','2026-05-02 22:58:30.154 +00:00'),(NULL,'The Pragmatic Programmer','Dave Thomas','Tech',1999,'2026-05-02 22:58:30.154 +00:00','2026-05-02 22:58:30.154 +00:00'),(NULL,'Sapiens','Yuval Noah','History',2011,'2026-05-02 22:58:30.154 +00:00','2026-05-02 22:58:30.154 +00:00');
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+POST /bilinmeyen-yol 200 1.773 ms - 268
+  console.log
+    Executing (default): DELETE FROM `Books`
+
+      at Sequelize.log (node_modules/sequelize/lib/sequelize.js:1177:15)
+
+ PASS  ./books.test.js
+  GET /
+    √ redirects to /books with 302 (25 ms)
+  GET /books
+    √ returns 200 (241 ms)
+    √ returns 200 for page=1 (25 ms)
+    √ returns 200 for page=2 even if the page is empty (21 ms)
+    √ lists all 5 seeded books on the first page (20 ms)
+  GET /books?search=
+    √ searches by title and returns 200 (21 ms)
+    √ search by title shows matching book in response (22 ms)
+    √ searches by author and returns 200 (18 ms)
+    √ search by author shows matching book in response (19 ms)
+    √ searches by genre and returns 200 (23 ms)
+    √ search by genre shows matching book in response (17 ms)
+    √ searches by year and returns 200 (17 ms)
+    √ search by year shows matching book in response (16 ms)
+    √ returns 200 for a search with no matches (17 ms)
+    √ shows "no results" message when search has no matches (16 ms)
+    √ supports search together with pagination (17 ms)
+  GET /books/new
+    √ returns 200 and renders the form (17 ms)
+    √ rendered page contains title and author input fields (13 ms)
+  POST /books/new
+    √ creates a valid book and redirects to /books (21 ms)
+    √ creates a book without optional genre and year fields (9 ms)
+    √ genre and year are null when not provided (8 ms)
+    √ new book is actually persisted in the database (11 ms)
+    √ returns validation error (200) when title is missing (12 ms)
+    √ renders error message when title is missing (12 ms)
+    √ returns validation error (200) when author is missing (20 ms)
+    √ renders error message when author is missing (11 ms)
+    √ returns validation error when both title and author are missing (13 ms)
+    √ does not save book to DB when validation fails (13 ms)
+  GET /books/:id
+    √ returns 200 for an existing book (16 ms)
+    √ renders the book title on the detail page (14 ms)
+    √ renders the author on the detail page (15 ms)
+    √ renders error page (500) for a non-existing id (16 ms)
+  POST /books/:id (update)
+    √ updates a valid book and redirects to /books (11 ms)
+    √ returns validation error when title is empty (17 ms)
+    √ does not update DB when title is empty (16 ms)
+    √ returns validation error when author is empty (13 ms)
+    √ updates only the genre field (12 ms)
+    √ updates only the year field (10 ms)
+    √ other fields remain unchanged after partial update (10 ms)
+    √ renders error page (500) when updating a non-existing book (11 ms)
+  POST /books/:id/delete (delete)
+    √ deletes the book and redirects to /books (9 ms)
+    √ renders error page (500) when deleting a non-existing book (9 ms)
+    √ reduces book count by one after deletion (13 ms)
+    √ deleted book is no longer findable in the database (9 ms)
+    √ other books are not affected after a deletion (14 ms)
+  404 - unknown route
+    √ renders the error page for an unknown route (9 ms)
+    √ unknown route response contains 404 text (7 ms)
+    √ POST to unknown route also returns error page (6 ms)
+
+---------------------------|---------|----------|---------|---------|-------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------------------|---------|----------|---------|---------|-------------------
+All files                  |   97.39 |    78.26 |     100 |   97.34 |
+ Library-DB-Express        |   97.56 |    83.33 |     100 |   97.56 |
+  app.js                   |   96.15 |      100 |     100 |   96.15 | 24
+  errorHandlers.js         |     100 |    83.33 |     100 |     100 | 18
+ Library-DB-Express/models |   95.83 |    66.66 |     100 |   95.83 |
+  book.js                  |     100 |      100 |     100 |     100 |
+  index.js                 |      95 |    66.66 |     100 |      95 | 14
+ Library-DB-Express/routes |      98 |     87.5 |     100 |   97.91 |
+  index.js                 |      98 |     87.5 |     100 |   97.91 | 106
+---------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       48 passed, 48 total
+Snapshots:   0 total
+Time:        2.702 s
+Ran all test suites.

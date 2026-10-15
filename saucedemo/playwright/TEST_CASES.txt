@@ -1,0 +1,28 @@
+Equivalence Class Partitioning (ECP)
+TC01 - Valid Credentials
+TC02 - Invalid Password
+TC03 - Invalid Username
+TC04 - Empty Username
+TC05 - Empty Password
+
+Boundary Value Analysis (BVA)
+TC06 - Locked Out User
+TC07 - Max Length Username
+TC08 - Min Length Username, 1 char
+
+Decision Table Testing
+TC09 - Both Empty
+TC10 - Valid User + Wrong Password
+TC11 - Invalid User + Valid Password
+TC12 - Locked User + Valid Password
+
+Use Case Testing
+TC13 - End-to-End Purchase
+TC14 - Remove Item From Cart
+TC15 - Sort Products A to Z
+TC16 - Logout
+TC17 - Sort Products Z to A
+TC18 - Sort Products Price Low to High
+TC19 - Sort Products Price High to Low
+TC20 - Product Detail Page and Add to Cart From Detail View
+TC21 - Cart Badge Count and Reset App State
